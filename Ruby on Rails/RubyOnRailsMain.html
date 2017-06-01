@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby on Rails</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" rel="stylesheet">
+  <link href="../stylesheet.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <h1>Output</h1>
+  
+  <h2>Print</h2>
+  <p class="code"><b class="code">print</b> "Text"</p>
+
+  <h2>Print with Newline</h2>
+  <p class="code"><b class="code">puts</b> "Text"</p>
+  
+  <h2>Printing variables to output</h2>
+  <p class="code">puts "Text <b>#{variable}</b>"</p>
+  
+  <h1>Comments</h1>
+  
+  <h2>Single Line</h2>
+  <p class="code"># Comment Here</p>
+  
+  <h2>Multiple Lines</h2>
+  <p class="code">=begin<br />Comment Here<br />=end</p>
+  
+  <h1>Variables</h1>
+  
+  <h2>Variables</h2>
+  <p>Variables are alphanumeric and can contain the underscore character (_). It may not start with a number or capital letter. The values can be reassigned later on in the code.</p>
+  
+  <h2>Constants</h2>
+  <p>Variables that begin with a capital letter are constants and cannot be changed</p>
+  
+  <h1>Operators</h1>
+
+  <h2>Precendence</h2>
+  <p>Operators following the following precendance and is read from left to right. Parenthesis change the precendance and go in that order.</p>
+
+  <ol>
+    <li>Exponentiation</li>
+    <li>Multiplication</li>
+    <li>Division</li>
+    <li>Modulus</li>
+    <li>Addition</li>
+    <li>Subtraction</li>
+  </ol>
+
+  <table border="1px">
+    <tr>
+      <td>Addition</td>
+      <td class="code">a + b</td>
+    </tr>
+    <tr>
+      <td>Subtraction</td>
+      <td class="code">a - b</td>
+    </tr>
+    <tr>
+      <td>Multiplication</td>
+      <td class="code">a * b</td>
+    </tr>
+    <tr>
+      <td>Division</td>
+      <td class="code">a / b</td>
+    </tr>
+    <tr>
+      <td>Exponent</td>
+      <td class="code">a**b</td>
+    </tr>
+    <tr>
+      <td>Modulo</td>
+      <td class="code">a % b</td>
+    </tr>
+    <tr>
+      <td>Self-Assignment Operator</td>
+      <td class="code">a += y</td>
+    </tr>
+  </table>
+
+
+  <h1>Assignment<h2>
+
+  <h2>Assignment Operator (=)</h2>
+  <p class="code">x = 10<br />y = 20<br />z = 30</p>
+
+  <h2>Parallel Assignment</h2>
+  <p class="code">x, y, z = 10, 20, 30</p>
+
+  <h2>Swap Values</h2>
+  <p class="code">x, y = y, x</p>
+  
+  <h1>Strings</h1>
+  
+  <h2>Newline within the string</h2>
+  <p class="code">"Text <b class="code">\n</b>"</p>
+  
+  <h2>Variables within a string</h2>
+  <p class="code">"Text <b class="code">#{variable}</b>"</p>
+  
+  <h2>Concatentation</h2>
+  <p class="code">a + b</p>
+  
+  <h2>Repeating a String</h2>
+  <p>String will be repeated, without spaces, by the number it is multiplied by.</p>
+  <p class="code">"string" * #</p>
+
+  <h1>Input</h1>
+  
+  <h2>Input with Newline Character</h2>
+  <p class="code">variable = <b class="code">gets</b></p>
+
+  <h2>Input without Newline Character</h2>
+  <p class="code">variable = <b class="code">gets.chomp</b></p>
+
+  <h2>Integer and Float Input</h2>
+  <p>Gets will get a string. For other data types, use the following to convert to the desired data type.</p>
+  <p class="code">variable = gets.to_i</p>
+
+  <table border=1px>
+    <tr>
+      <td>Integer</td>
+      <td class="code">gets.to_i</td>
+    </tr>
+    <tr>
+      <td>Float</td>
+      <td class="code">gets.to_f</td>
+    </tr>
+  </table>
+
+</html>

@@ -1,0 +1,47 @@
+h1{
+  font-family: 'Roboto';
+  font-size:16pt;
+}
+
+h2{
+  font-family: 'Roboto';
+  font-size:12pt;
+  font-weight:normal;
+  color:darkblue;
+}
+*{
+  font-family: 'Roboto';
+}
+p{
+  font-family: 'Roboto';
+  padding-left:25px;
+  padding-right:50px;
+}
+
+p.code{
+  font-family: 'Consolas', sans-serif;
+  background-color:powderblue;
+  width:500px;
+  margin-left:25px;
+  padding-left:10px;
+}
+
+b.code{
+  font-family: 'Consolas', sans-serif;
+}
+td{
+  font-family: 'Roboto';
+  text-align: center;
+}
+td.code{
+  font-family: 'Consolas', sans-serif;
+  background-color:powderblue;
+  width:150px;
+  text-align: center;
+  margin-left:25px;
+  padding-left:10px;
+}
+
+.indent{
+  text-indent:20px;
+}
