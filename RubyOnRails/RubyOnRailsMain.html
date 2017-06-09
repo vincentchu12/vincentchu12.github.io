@@ -23,7 +23,7 @@
   <p class="code"># Comment Here</p>
   
   <h2>Multiple Lines</h2>
-  <p class="code">=begin<br />Comment Here<br />=end</p>
+  <p class="code">=begin<br />&nbsp&nbspComment Here<br />=end</p>
   
   <h1>Variables</h1>
   
@@ -33,6 +33,13 @@
   <h2>Constants</h2>
   <p>Variables that begin with a capital letter are constants and cannot be changed</p>
   
+  <h2>Local Variables</h2>
+  <p>Local variables can only be accessed within their respective code blocks. They cannot be accessed or changed outside of them.</p>
+  
+  <h2>Global Variables</h2>
+  <p>Global variables are accessible from anywhere in the program. To create a global variable a dollar sign ($) is added to the beginning of the variable.</p>
+  <p class="code">$global_variable</p>
+
   <h1>Operators</h1>
 
   <h2>Precendence</h2>
@@ -128,4 +135,403 @@
     </tr>
   </table>
 
+  <h1>Boolean</h1>
+  
+  <h2>Truthy</h2>
+  <p>If a string or integer variable is evaluated, it will return truthy as will a true boolean variable or comparison.</p>
+  <ul>
+    <li>true</li>
+    <li>strings</li>
+    <li>numbers</li>
+  </ul>
+  
+  <h2>Falsey</h2>
+  <p>For falsey to be evaluated, the boolean variable or comparison has to be false.</p>
+  <ul>
+    <li>false</li>
+    <li>nil</li>
+  </ul>
+
+  <h2>Comparison Operators</h2>
+  <p>These operators are used to compare strings and other data types.</p>
+  <table border=1px>
+    <tr>
+      <td>Equal</td>
+      <td class="code">==</td>
+    </tr>
+    <tr>
+      <td>Not Equal</td>
+      <td class="code">!=</td>
+    </tr>
+    <tr>
+      <td>Greater Than</td>
+      <td class="code">&gt</td>
+    </tr>
+    <tr>
+      <td>Less than</td>
+      <td class="code">&lt</td>
+    </tr>
+    <tr>
+      <td>Greater Than or Equal To</td>
+      <td class="code">=&gt</td>
+    </tr>
+    <tr>
+      <td>Less Than or Equal To</td>
+      <td class="code">=&lt</td>
+    </tr>
+    <tr>
+      <td>Same Type and Value</td>
+      <td class="code">variable.<b class="code">eql?(value)</b></td>
+    </tr>
+  </table>
+
+  <h2>Logical Operators</h2>
+  <p>These operators are used to compare more than one conditions</p>
+  <table border=1px>
+    <tr>
+      <td>And</td>
+      <td class="code">boolean && boolean</td>
+    </tr>
+    <tr>
+      <td>Or</td>
+      <td class="code">boolean || boolean</td>
+    </tr>
+    <tr>
+      <td>Not</td>
+      <td class="code">!(boolean)</td>
+    </tr>
+  </table>
+
+  <h1>Ranges</h1>
+  <h2>Ranges</h2>
+  <p>Ranges can be created for strings or integers. Strings follow the a~z, aa~zz format.</p>
+
+  <h2>Two Dots</h2>
+  <p>Inclusive range that includes the numbers</p>
+  <p class="code">number..number<br /># number to number</p>
+
+  <h2>Three Dots</h2>
+  <p>Includes the low value, but excludes the high value</p>
+  <p class="code">number...number<br /># number to (number - 1)</p>
+
+  <h2>Converting to an Array</h2>
+  <p class="code">array = (number..number).to_a</p>
+  <h1>Control Structures</h1>
+  <h2>If Statement</h2>
+  <p>Executes block if boolean is true</p>
+  <p class="code"><b class="code">if</b> boolean <br />&nbsp&nbsp#Statements<br /><b class="class">end</b></p>
+
+  <h2>Else Statement</h2>
+  <p class="code">if boolean <br />&nbsp&nbsp#Statements<br /><b class="code">else</b><br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Else If Statements</h2>
+  <p class="code">if boolean<br />&nbsp&nbsp#Statements<br /><b class="code">elsif</b><br />&nbsp&nbsp#Statements<br />else<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Unless Statements</h2>
+  <p>Executes block if boolean is false</p>
+  <p class="code"><b class="code">unless</b> boolean<br />&nbsp&nbsp#Statements<br />else<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Case Statements</h2>
+  <p>When statements can be single values, multiple values, or ranges. An else statment is the default statement that will be executed when none of the other when statements are met.</p>
+  <p class="code"><b class="code">case</b> variable<br /><b class="code">when</b> value<br />&nbsp&nbsp#Statements<br /><b class="code">when</b> value, value<br />&nbsp&nbsp#Statements<br /><b class="code">when</b> value..value<br />&nbsp&nbsp#Statements<br /><b class="code">else</b><br />&nbsp&nbsp#Statements<br /><b class="code">end</b></p>
+
+  <h1>Loops</h1>
+
+  <h2>While</h2>
+  <p class="code"><b class="code">while</b> boolean<br />&nbsp&nbsp#Statements<br /><b class="code">end</b></p>
+
+  <h2>Until</h2>
+  <p class="code"><b class="code">until</b> boolean<br />&nbsp&nbsp#Statements<br /><b class="code">end</b></p>
+
+  <h2>For</h2>
+  <p class="code"><b class="code">for</b> variable <b class="code">in</b> (range)<br />&nbsp&nbsp #Statement<br /><b class="code">end</b></p>
+
+
+  <h2>Loop Do</h2>
+  <p class="code"><b class="code">loop do</b><br />&nbsp&nbsp#Statements<br />&nbsp&nbsp<b class="code">break</b> if boolean<br />end</p>
+
+  <h2>Statements</h2>
+  <table border=1px>
+    <tr>
+      <td>Break</td>
+      <td>stops the loop</td>
+    </tr>
+    <tr>
+      <td>Next</td>
+      <td>skips this iteration of the loop, continues the next iteration</td>
+    </tr>
+    <tr>
+      <td>Redo</td>
+      <td>repeats current iteration of the loop</td>
+    </tr>
+    <tr>
+      <td>Retry</td>
+      <td>repeats the whole loop from the beginning</td>
+    </tr>
+  </table>
+
+  <h1>Arrays</h1>
+  <h2>Arrays</h2>
+  <p>Arrays are referenced starting from index 0. To reference from the end of the array, start from -1.</p>
+
+  <h2>Creating an Array</h2>
+  <p class="code">variable = <b class="code">[element, element, "element"]</b></p>
+
+  <h2>Adding Elements</h2>
+  <p> Push insert elements at the end. <br />The << operator inserts a single element at the end.<br />The insert method inserts multiple elements at the specified index.</p>
+
+  <table border=1px>
+    <tr>
+      <td>Push</td>
+      <td class="code">array.<b class="code">push</b>(element)</td>
+    </tr>
+    <tr>
+      <td><<</td>
+      <td class="code">array <b class="code">&lt&lt</b> element</td>
+    </tr>
+    <tr>
+      <td>Insert</td>
+      <td class="code">array.<b class="code">insert</b>(index,element, element)</td>
+    </tr>
+  </table>
+  
+  <h2>Removing Elements</h2>
+  <p>Pop removes the last element.<br/>The delete_at method deletes the element at that index.<br />Both methods return the elements.</p>
+  
+  <table border=1px>
+    <tr>
+      <td>Pop</td>
+      <td class="code">array.<b class="code">pop</b></td>
+    </tr>
+    <tr>
+      <td>Delete At</td>
+      <td class="code">array.<b class="code">delete_at</b>(index)</td>
+    </tr>
+  </table>
+
+
+  <h2>Printing Arrays</h2>
+  <p>Puts outputs a single element per line.<br/>Print outputs the elements separated by commas on a single line enclosed in brackets.<br />Ranges can be used to reference a subset of an array.</p>
+  <table border=1px>
+    <tr>
+      <td>Puts</td>
+      <td class="code"><b class="code">puts</b> array</td>
+    </tr>
+    <tr>
+      <td>Print</td>
+      <td class="code"><b class="code">print</b> array</td>
+    </tr>
+  </table>
+
+  <h2>Nested Arrays</h2>
+  <p>Arrays can have multiple levels of nesting and are referenced like the following.</p>
+  <p class="code"> arr = [element_a, [element_b, element_c]]<br />arr[index][index]</p>
+
+  <h1>Manipulating Arrays</h1>
+  
+  <h2>Combining Arrays</h2>
+  <p>Two arrays can be added to one another to combine them.</p>
+  <p class="code">array_a += array_b</p>
+
+  <h2>Removing Elements</h2>
+  <p>When two arrays are subtracted, elements that occur in the second array are removed from the first.</p>
+  <p class="code">array_a -= array_b</p>
+
+  <h2>Duplicating Elements</h2>
+  <p>Arrays can be multiplied by an integer to repeat the elements of the array at the end</p>
+  <p class="code">array *= number</p>
+
+  <h2>Boolean Operators</h2>
+  <p> The AND operator produce a non-duplicated array with values that are only present in both arrays.<br />The OR operator combines the two arrays and removes duplicates.</p>
+
+  <table border=1px>
+    <tr>
+      <td>And</td>
+      <td class="code">array_a <b class="code">&</b> array_b</td>
+    </tr>
+    <tr>
+      <td>Or</td>
+      <td class="code">array_a <b class="code">|</b> array_b</td>
+    </tr>
+  </table>
+
+  <h2>Other Methods</h2>
+  <table border=1px>
+    <tr>
+      <td>Number Of Elements in an Array</td>
+      <td class="code">array.<b class="code">length</b> or array.<b class="code">size</b></td>
+    </tr>
+    <tr>
+      <td>Sort Array in Ascending Order</td>
+      <td class="code">array.<b class="code">sort</b></td>
+    </tr>
+    <tr>
+      <td>Remove Duplicates</td>
+      <td class="code">array.<b class="code">uniq</b></td>
+    </tr>
+    <tr>
+      <td>Checks to See if Element Occurs in Array</td>
+      <td class="code">array.<b class="code">include?</b>(element)</td>
+    </tr>
+    <tr>
+      <td>Make an Array Constant</td>
+      <td class="code">array.<b class="code">freeze</b></td>
+    </tr>
+    <tr>
+      <td>Find Index of Minimum Value</td>
+      <td class="code">array.<b class="code">min</b></td>
+    </tr>
+    <tr>
+      <td>Find Index of Maximum Value</td>
+      <td class="code">array.<b class="code">max</b></td>
+    </tr>
+    <tr>
+      <td>Find Index of First Occurance of Element</td>
+      <td class="code">array.<b class="code">index</b>(element)</td>
+    </tr>
+  </table>
+
+  <h1>Hashes</h1>
+  <h2>Hashes</h2>
+  <p>Hashes are similar to arrays, where elements can be indexed with strings, numbers or arrays. They come in <b>key=>value</b> pairs. Symbols are keys that are fixed and cannot be changed.</p>
+  <p class="code"> hash_a = {"string"=>value, :symbol=>value}<br /> hash_b = {number=>value; [element, element]=>value}<br />hash_c = {symbol:value}<br /> puts hash[:symbol]</p>
+
+  <h2>Nested Hashes</h2>
+  <p>Similar to arrays, hashes can also have multiple levels of nesting.</p>
+  <p class="code"> hash = {<br />&nbsp&nbspsymbol_a: {key_a:value_a,key_b:value_b}<br />&nbsp&nbspsymbol_b: {key_c:value_c,key_d:value_d}<br />}<br />puts hash[:key][:key]</p>
+  <h2>Other Methods</h2>
+  <table border=1px>
+    <tr>
+      <td>Removing a Key-Value Pair</td>
+      <td class="code">hash.<b class="code">delete</b>(key)</td>
+    </tr>
+    <tr>
+      <td>Finding Corresponding Key</td>
+      <td class="code">hash.<b class="code">key</b>(value)</td>
+    </tr>
+    <tr>
+      <td>Changing Keys to Values and Values to Keys</td>
+      <td class="code">hash.<b class="code">invert</b></td>
+    </tr>
+    <tr>
+      <td>Returns an Array of Keys</td>
+      <td class="code">hash.<b class="code">keys</b></td>
+    </tr>
+    <tr>
+      <td>Returns an Array of Values</td>
+      <td class="code">hash.<b class="code">values</b></td>
+    </tr>
+    <tr>
+      <td>Size of Hash</td>
+      <td class="code">hash.<b class="code">length</b></td>
+    </tr>
+  </table>
+
+  <h1>Iterators</h1>
+  <h2>Iterators</h2>
+
+  <p>For all code blocks there is a shorthand way of accomplishing the functions by enclosing the statements within curly braces as shown below.</p>
+  <p class="code">array.each {|element| #Statements}</p>
+  <p>In addition, characters in a string can be iterated one by one with <b>each_char</b>.</p>
+
+  <h2>Each</h2>
+  <p>The array or hash will be iterated through and each element will be assigned to the block parameters located inside the pipe symbols.</p>
+  <p class="code"> array.<b class="code">each</b> do |element|<br />&nbsp&nbsp#Statements<br />end</p>
+  <p class="code"> hash.<b class="code">each</b> do |key, value|<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Times</h2>
+  <p>This is a controlled loop with a specified number of times. It will count from 0 and increment by one.</p>
+  <p class="code">number.<b class="code">times</b> do<br />&nbsp&nbsp #Statements<br />end</p>
+
+  <h2>Up To</h2>
+  <p>This loop starts at a specified number and increment by one until the specified end number.</p>
+  <p class="code">start_num.<b class="code">upto</b>(end_num) do<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Down To</h2>
+  <p>This loop starts at a specified number and decrement by one until the specified end number.</p>
+  <p class="code">start_num.<b class="code">downto</b>(end_num) do<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Step</h2>
+  <p>This loop will increment by a specified amount through a specified range</p>
+  <p class="code">start_num.<b class="code">step</b>(end_num, size) do<br />&nbsp&nbsp#Statements<br />end</p>
+  <p class="code">(start_num..end_num).<b class="code">step</b>(size) do<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h1>Methods</h1>
+  <h2>Method Definitions</h2>
+  <p>Methods are a set of statements that perform a specific task.</p>
+  <p class="code"><b class="code">def</b> method_name<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Parameters</h2>
+  <p>Methods can include parameters which are enclosed in parentheses and separated by commas. The arguments are passed into the parameter when the method is used. However, the parethesis are not required and can be left out. </p>
+  <p class="code">def method_name(<b class="code">parameter</b>, <b class="code">parameter</b>)<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Default Parameters</h2>
+  <p>You can set default values so that in the case that not enough arguments are passed in, the parameter will still be initialized to the default value.</p>
+  <p class="code">def method_name(parameter, <b class="code">parameter=value</b>)<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Optional Parameters</h2>
+  <p>You create a method that will accept multiple arguments which will be become elements of an array.</p>
+  <p class="code">def method_name(<b class="code">*array</b>)<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h1>Return Values</h1>
+  <h2>Return Values</h2>
+  <p>Values can be returned from a method to be used later on or assigned to variables in the program. By default, the method returns the last line of the method. Statements after the return statement will not be executed as the method ends at the return statement.</p>
+  <p class="code">def method_name(parameter)<br />&nbsp&nbsp#Statements<br />&nbsp&nbsp<b class="code">return</b> value<br />end</p>
+  <p>Multiple values can be returned by having them separating them by commas int he return statement</p>
+  <p class="code">def method_name(paramenter)<br />&nbsp&nbsp#Statements<br />&nbsp&nbspreturn <b class="code">value, value</b><br />end</p>
+  <p>Since methods return a value, they can also be chained together. They can also be passed in as arguments for other moethods.</p>
+
+  <h1>Recursion</h1>
+  <h2>Recursion</h2>
+  <p>Recursion is the concept of methods calling themselves. They contain a base case and a general case solving the problem in smaller parts.</p>
+  <p class="code">def method_name(parameter)<br />&nbsp&nbspif base_boolean<br />&nbsp&nbsp&nbsp&nbsp#Statements<br />&nbsp&nbspelse<br />&nbsp&nbsp&nbsp&nbsp#Statements<br />&nbsp&nbsp&nbsp&nbspmethod_name(argument)<br />&nbsp&nbspend<br />end</p>
+
+  <h1>Classes</h1>
+  <h2>Classes</h2>
+  <p>A class defines the data and actions associated with an object. The initialize method is automatically called when a new object is instantiated. Instance variables defined in a class have the @ symbol in the front. Methods can also be defined int he class to accept arguments and return values.</p>
+  <p class="code"><b class="code">class</b> Class_name<br />&nbsp&nbspdef <b class="code">initialize</b><br />&nbsp&nbsp&nbsp&nbsp@variable = value<br />&nbsp&nbspend<br /><br />&nbsp&nbspdef <b class="code">variable</b> #Getter<br />&nbsp&nbsp&nbsp&nbsp@variable<br />&nbsp&nbspend<br /><br />&nbsp&nbspdef <b class="code">variable=</b>(parameter) #Setter<br />&nbsp&nbsp&nbsp&nbsp@variable = parameter<br />&nbsp&nbspend<br /><b class="code">end</b></p>
+  <p class="code">object = Class_name.<b class="code">new</b></p>
+
+  <h2>Accessors</h2>
+  <p>While you can manually create methods that will perform the action of setting and getting instance variables. There is an easy way of creating these methods. The self keyword is used within the class to reference the instance variables and can be used to differentiate from methods with the same name.</p>
+
+  <p class="code"><b class="code">attr_accessor</b> :var_a, :var_b #Setter and Getter<br /><br /><b class="code">attr_reader</b> :variable #Getter Only<br /><br /><b class="code">attr_writer</b> :variable #Setter Only</p>
+
+  <h2>Class Methods</h2>
+  <p>These are methods that do not require an object for the method to be used. Instead, the class itself can call the method.</p>
+  <p class="code">class Class_name<br />&nbsp&nbspdef <b class="code">self.method_name</b><br />&nbsp&nbsp&nbsp&nbsp#Statements<br />&nbsp&nbspend<br />end</p>
+  <p class="code">Class_name.method_name</p>
+
+  <h2>Class Variables</h2>
+  <p>Variables with two @ signs are variables that belong to the class. They are shared amoung created objects and tell you information about the class.</p>
+  <p class="code">@@variable</p>
+
+  <p>Constant variables belonging to the class start with a capital letter.</p>
+  <p class="code">class Class_name<br />&nbsp&nbspConst_var = value<br />end</p>
+  <p>To reference them you use two colon symbols.</p>
+  <p class="code">Class_name::Const_var</p>
+
+  <h1>Overridding</h1>
+  <p>All classes come with a <b>to_s</b> method that converts the object into a string. When the <b>to_s</b> method is used on an object, it will print the object id. However, the <b>to_s</b> method can be overridden to return a string can be used to print information about the object.</p>
+
+  <p class="code">class Class_name<br />&nbsp&nbsp def <b class="code">to_s</b><br />&nbsp&nbsp&nbsp&nbsp"String"<br />&nbsp&nbspend<br />end</p>
+
+  <p>Omitting the <b>to_s</b> will produce the same result as including it, the <b>to_s</b> is automatically called for objects.</p>
+  <p class="code">print object.to_s<br />print object</p>
+
+  <h1>Inheritance</h1>
+  <p>Subclasses (derived) inherit the attribute and behaviors of its superclass (base). Methods can be overridden to have its own implementation. There can be multiple levels of inheritance with an "is a" relationship of base and derived class.</p>
+  <p class="code">class Subclass <b class="code">&lt </b>Superclass<br />&nbsp&nbsp#Statements<br />end</p>
+
+  <h2>Super Method</h2>
+  <p>When the <b>super</b> method is used in a derived classes method, the base classes method of the same name will be called.</p>
+
+  <p class="code">class Subclass < Superclass<br />&nbsp&nbspdef method_name<br />&nbsp&nbsp&nbsp&nbsp<b class="code">super</b><br />&nbsp&nbsp&nbsp&nbsp#Statements<br />&nbsp&nbspend<br />end</p>
+
+  <p>The super method can be used to initialize the instance variables.</p>
+  <p class="code">class Subclass < Superclass<br />&nbsp&nbspdef initialize(parameter, parameter)<br />&nbsp&nbsp&nbsp&nbsp<b class="code">super(parameter)</b><br />&nbsp&nbsp&nbsp&nbsp@variable = value<br />&nbsp&nbspend<br />end</p>
+
+  <h1>Operator Overloading</h1>
+  <h2>Operator Overloading</h2>
+  
 </html>
